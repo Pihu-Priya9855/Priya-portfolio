@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Restaurant</title>
+    <style>
+        * {
+            margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+        }
+        body{
+            margin: 0;
+            background-color: orange;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: aqua;
+            padding: 35px 70px;
+        }
+        nav{
+            display:flex;
+            gap: 20px;
+           }
+        nav a{
+            text-decoration: none;
+            color: black;
+        }
+        .hero{
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            
+        }
+        .hero img{
+            width: 50%;
+            height: 250px;
+            border-radius: 10px;
+        }
+        .hero h2{
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">My Restaurant</h1>
+        <nav>
+            <a href="Home">Home</a>
+            <a href="about">About</a>
+            <a href="Menu">Menu</a>
+            <a href="Contact">Contact</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <h2>Welcome to my restaurant</h2>
+        <img id="slider" src="download.jpg" width="300">
+        <script>
+            let images = ["download.jpg" , "xyz.jpg", "images.jpg", "img.jpg" , "abc.jpg"];
+            let index = 0;
+            setInterval(function(){
+                index++;
+                if(index >= images.lenth){
+                    index = 0;
+                }
+                document.getElementById("slider").src=images[index];
+            }, 5000);
+        </script>
+    </div>
+</body>
+</html>
